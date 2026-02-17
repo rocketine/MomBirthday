@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.jpg'); /* First background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 0.8s ease;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            transition: 0.8s ease;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e73370;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="content">
+        <h1>Click for Your Surprise 🎁</h1>
+        <button class="btn" onclick="showSurprise()">See Your Present</button>
+    </div>
+
+    <script>
+        function showSurprise() {
+            // Change background to birthday present picture
+            document.body.style.backgroundImage = "url('birthday.jpg')"; // Second image
+
+            // Change text to birthday wishes
+            document.getElementById('content').innerHTML = `
+                <h1>🎉 Happy Birthday! 🎂</h1>
+                <p style="font-size:20px; margin-top:15px;">
+                    Wishing you a day filled with love, joy, and happiness! 💖<br>
+                    May all your dreams come true! ✨
+                </p>
+            `;
+        }
+    </script>
+</body>
+</html>
