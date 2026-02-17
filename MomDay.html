@@ -17,30 +17,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('background.jpg'); /* First background image */
+            background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: 0.8s ease;
         }
 
         .overlay {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
             color: white;
-            transition: 0.8s ease;
+            max-width: 500px;
+            width: 90%;
+            transition: 0.6s ease;
         }
 
         h1 {
             margin-bottom: 20px;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .btn {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 12px 25px;
+            font-size: 16px;
             color: white;
             background-color: #ff4081;
             border: none;
@@ -54,8 +55,10 @@
             transform: scale(1.05);
         }
 
-        .hidden {
-            display: none;
+        .birthday-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -67,16 +70,12 @@
 
     <script>
         function showSurprise() {
-            // Change background to birthday present picture
-            document.body.style.backgroundImage = "url('birthday.jpg')"; // Second image
-
-            // Change text to birthday wishes
             document.getElementById('content').innerHTML = `
-                <h1>🎉 Happy Birthday! 🎂</h1>
-                <p style="font-size:20px; margin-top:15px;">
-                    Wishing you a day filled with love, joy, and happiness! 💖<br>
-                    May all your dreams come true! ✨
+                <h1>🎉 Happy Birthday Mom! 🎂</h1>
+                <p style="margin-top:10px; font-size:18px;">
+                    Wishing you a day full of happiness, love and beautiful moments! 💖✨
                 </p>
+                <img src="birthday.jpg" alt="Birthday Present" class="birthday-img">
             `;
         }
     </script>
